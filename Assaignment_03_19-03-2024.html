@@ -1,79 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Body Layout</title>
-    <style>
-        body {
-    display: grid;
-    grid-template-areas:
-        "header header"
-        "main aside"
-        "nav nav";
-    grid-template-rows: auto  auto;
-    grid-template-columns: 1fr 1fr;
-    min-height: 100vh;
-    margin: 0;
-}
-
-header {
-    grid-area: header;
-    background-color: #333;
-    color: white;
-    padding: 10px;
-}
-
-
-main {
-    grid-area: main;
-    background-color: #ddd;
-    padding: 10px;
-}
-.main-grid {display: grid;
-    grid-template-rows: repeat(6, 1fr);
-    
-}
-
-aside {
-    grid-area: aside;
-    background-color: #ddd;
-    padding: 10px;
-}
-
-nav {
-    grid-area: nav;
-    background-color: #333;
-    color: white;
-    padding: 10px;
-}
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Header with Icons and Button</title>
+<style>
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+    }
+    .left-text {
+        flex: 1;
+    }
+    .right-icons {
+        display: flex;
+        align-items: center;
+    }
+    .icon {
+        margin-right: 10px;
+    }
+    .button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
 </head>
 <body>
-    <header>Header</header>
-    <main class="main-grid">
-        <div>
-            1
+
+<header class="header">
+    <div class="left-text">
+        ReTro
+    </div>
+    <div class="right-icons">
+        <div class="icon">
+            <!-- Icon 1 -->
+            <img src="icon1.png" alt="Icon 1">
         </div>
-        <div>
-            1
+        <div class="icon">
+            <!-- Icon 2 -->
+            <img src="icon2.png" alt="Icon 2">
         </div>
-        <div>
-            1
+        <div class="icon">
+            <!-- Icon 3 -->
+            <img src="icon3.png" alt="Icon 3">
         </div>
-        <div>
-            1
+        <div class="icon">
+            <!-- Icon 4 -->
+            <img src="icon4.png" alt="Icon 4">
         </div>
-        <div>
-            1
-        </div>
-        <div>
-            1
-        </div>
-    </main>
-    <aside>Aside Content</aside>
-    <nav>nav</nav>
-    <nav>nav</nav>
-    <nav>nav</nav>
+        <button class="button">Sign In</button>
+    </div>
+</header>
+
 </body>
 </html>
